@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MenuRails</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>MenuRails</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <!-- Script reference to react core -->
+        <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+        <!-- Script reference to react-dom for DOM manipulation -->
+        <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+        <!-- Babel is used to compile JSX to plaing JavaScript -->
+        <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+        <!-- jQuery is included to make AJAX calls simple -->
+        <script src="https://npmcdn.com/jquery@3.1.0/dist/jquery.min.js"></script>
+    </head>
 
-  <body>
-    <%= yield %>
-  </body>
+    <body>
+        <%= yield %>
+    </body>
 </html>

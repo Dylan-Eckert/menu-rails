@@ -11,11 +11,14 @@ class MenuItemsController < ApplicationController
   def create
     @menu = Menu.find(params[:menu_id])
     @menu_item = @menu.menu_items.build(item_params)
-
     if @menu_item.save
-      redirect_to @menu
-    else
-      render :new
+      @menu_items = Menu.find(params[:menu_id]).menu_items
+      respond_to do |format|
+        format.html {
+              redirect_to @menu
+            }# will render the default view for this action
+        format.json
+      end
     end
   end
 
